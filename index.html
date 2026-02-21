@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Tarefas</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="tabela">
+      <h3>Lista de Tarefas</h3>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Custo</th>
+            <th scope="col">Data Limite</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody class="dadosTabela">
+          <!-- <tr></tr> -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" style="text-align: center; font-weight: bold">
+              Total: <span class="totalCusto">R$ 0,00</span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="formulario">
+      <h3>Nova Tarefa</h3>
+      <form action="" method="post">
+        <p>
+          Nome da Tarefa:
+          <input
+            type="text"
+            placeholder="Digite o nome da tarefa"
+            class="nome"
+            required
+          />
+        </p>
+        <p>
+          Custo:
+          <input type="text" placeholder="R$" class="custo" required />
+        </p>
+        <p>Data Limite: <input type="date" class="dataLimite" required /></p>
+        <button class="btn-incluir">Incluir</button>
+      </form>
+    </div>
+
+    <!-- Modal para edição -->
+    <div id="editarModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Editar Tarefa</h3>
+        <form id="editarForm">
+          <div class="form-group">
+            <label for="editarNome">Nome da Tarefa:</label>
+            <input type="text" id="editarNome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="editarCusto">Custo:</label>
+            <input
+              type="number"
+              id="editarCusto"
+              step="0.01"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="editarData">Data Limite:</label>
+            <input type="date" id="editarData" required />
+          </div>
+
+          <button type="submit" class="btn-save">Salvar Mudanças</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

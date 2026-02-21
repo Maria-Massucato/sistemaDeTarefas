@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+    padding: 20px;
+    padding-top: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+     font-weight: bold;
+}
+
+table {
+  width: 70%;                 /*  Largura da tabela */
+  border-collapse: collapse; /* Borda única (não dupla) */
+  margin: 10px auto;         /* Centraliza a tabela */
+  font-size: 16px;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  border-bottom: 1px solid #969696;
+  border-radius: 8px;        /* Arredonda as bordas */
+  overflow: hidden;          /* Garante que o conteúdo respeite o border-radius */
+}
+
+td, th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #969696;
+}
+
+
+thead{
+    background-color: #313131; /* Cor de fundo do cabeçalho */
+  color: #ffffff;           /* Cor do texto do cabeçalho */
+  text-align: left;
+}
+
+tfoot {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Arredondamento dos cantos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.formulario p {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.formulario input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-incluir {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+        font-weight: bold;
+}
+
+.btn-editar {
+    background-color:  #fbff17;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #fbff17;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333;
+}
+
+.tarefa-custo-alto {
+    background-color: #ffff99 !important;
+    font-weight: bold;
+}
