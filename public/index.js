@@ -5,7 +5,7 @@ let tarefaEditando = null;
 // 🔄 CARREGAR TAREFAS DO BANCO
 // ===============================
 async function carregarTarefas() {
-  const resposta = await fetch("http://localhost:3000/tarefas");
+  const resposta = await fetch(`${API_URL}/tarefas`);
   const dados = await resposta.json();
 
   tarefas = dados.map((t) => ({
@@ -131,7 +131,7 @@ function fecharModal() {
 async function excluirTarefa(id) {
   if (!confirm("Tem certeza que deseja excluir esta tarefa?")) return;
 
-  await fetch(`http://localhost:3000/tarefas/${id}`, {
+  await fetch(`${API_URL}/tarefas/${id}`, {
     method: "DELETE",
   });
 
@@ -175,7 +175,7 @@ formulario.addEventListener("submit", async function (evento) {
     return;
   }
 
-  await fetch("http://localhost:3000/tarefas", {
+  await fetch(`${API_URL}/tarefas`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -211,7 +211,7 @@ formularioModal.addEventListener("submit", async function (evento) {
     return;
   }
 
-  await fetch(`http://localhost:3000/tarefas/${tarefaEditando}`, {
+  await fetch(`${API_URL}/tarefas/${tarefaEditando}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
