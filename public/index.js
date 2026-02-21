@@ -1,3 +1,7 @@
+const API_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:3000"
+  : "https://sistemadetarefas-production-cab8.up.railway.app";
+
 let tarefas = [];
 let tarefaEditando = null;
 
